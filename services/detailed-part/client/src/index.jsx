@@ -123,7 +123,7 @@ class App extends React.Component {
 	}
 }
 
-ReactDOM.render(
+ReactDOM.hydrate(
   <App />,
   document.getElementById('root')
 );

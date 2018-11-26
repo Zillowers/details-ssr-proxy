@@ -11,22 +11,15 @@ module.exports = {
     path: DIST_DIR,
   },
   module: {
-    // plugins: [
-    //   new CompressionPlugin({
-    //     filename: '[path].gz[query]',
-    //     algorithm: 'gzip',
-    //     test: /\.js$|\.css$|\.html$/,
-    //     threshold: 10240,
-    //     minRatio: 0.8,
-    //   }),
-    // ],
-    loaders: [
+    rules: [
       {
         test: /\.jsx?/,
         include: SRC_DIR,
-        loader: 'babel-loader',
-        query: {
-          presets: ['react', 'es2015'],
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/env', '@babel/react'],
+          },
         },
       },
       {

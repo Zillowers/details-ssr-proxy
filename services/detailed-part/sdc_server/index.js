@@ -5,6 +5,9 @@ require('newrelic');
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const fs = require('fs');
+
+
 const models = require('./models/index.js');
 const utils = require('./utils.js');
 
