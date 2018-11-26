@@ -1,0 +1,180 @@
+@import "_variables";
+
+// header
+.head{
+  .title, .floater{
+    display: inline-block;
+  }
+  .main-title{
+    display: block;
+  }
+}
+
+.floater{
+  @media (min-width: 769px){
+    float: right;
+  }
+  .price-area{
+    margin-bottom: 15px;
+  }
+  .status{
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: $regular-line-height;
+    font-weight: $thick-font-weight;
+  }
+  .fa-circle{
+    color: darken(red, 7%);
+    margin-right: 2px;
+  }
+  .price{
+    font-size: $main-title-font-size;
+    font-weight: $thick-font-weight;
+  }
+  .zestimate{
+    font-size: 12px;
+    .tooltip{
+      border-bottom: 1px dashed lighten(#000, 80%);
+      cursor: pointer;
+      position: relative;
+      .tooltip-btn{
+        position: absolute;
+        padding: 12px 29px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.calculator{
+  .cal-head{
+    text-transform: uppercase;
+    font-size: $detail-title-font-size;
+    font-weight: $thick-font-weight;
+    line-height: $regular-line-height; 
+  }
+  .estimate{
+    display: inline-block;
+    margin-right: 5px;
+    min-width: 105px;
+    font-size: 20px;
+    font-size: calc( 1rem + 1/3rem );
+    font-weight: 400;
+  }
+  .launch{
+    display: inline-block;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #444;
+    padding: 3px 5px 1px;
+    background: #fff;
+    @media (max-width: 768px){
+      display: none;
+    }
+    .arrow{
+      position: relative;
+      display: inline-block;
+      width: 13px;
+    }
+    .arrow::after{
+      content: '';
+      position: absolute;
+      top: -10px;
+      right: 3px;
+      display: block;
+      width: 5px;
+      height: 5px;
+      border-right: 4px solid transparent;
+      border-left: 4px solid transparent;
+      border-top: 6px solid #000;
+    }
+  }
+  .cal-btn{
+    color: $primary-color;
+    margin-top: 15px;
+    a{
+      text-decoration: none;
+      border-color: $primary-color;
+      border: 1px solid;
+      border-radius: 5px;
+      padding: 8px 10px;
+      font-weight: bold;
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
+    a:hover{
+      color: #fff;
+      background: #0074e4;
+    }
+    .fa-dollar-sign{
+      color: #fff;
+      position: relative;
+      z-index: 1;
+      margin-right: 7px;
+      margin-left: 5px;
+      font-size: 14px;
+      &:after{
+        content: '';
+        position: absolute;
+        display: block;
+        background: $primary-color;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        top: -3px;
+        left: -6px;
+        z-index: -1;
+      }
+    }
+  }
+}
+.tool-tip{
+  position: absolute;
+  background: #fff;
+  border: 1px solid black;
+  background: #444;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px 10px 8px;
+  font-size: 15px;
+  word-wrap: break-word;
+  width: 310px;
+  z-index: 10011;
+  right: 80px;
+  top: -47px;
+  a{
+    cursor: pointer;
+    font-weight: 300;
+    text-decoration: none;
+    color: $primary-color;
+  }
+  .right-arrow{
+    position: relative;
+    display: block;
+    &:before{
+      content: "\25B8";
+      position: absolute;
+      color: #444;
+      font-size: 30px;
+      right: -21px;
+      top: 27px;
+    }
+  }
+  @media (max-width: 768px){
+    position: fixed;
+    width: 100%;
+    border-radius: 0;
+    right: 0;
+    top: 30%;
+  }
+}
+.tooltip-overlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #000;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+}

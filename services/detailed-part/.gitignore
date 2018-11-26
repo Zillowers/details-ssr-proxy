@@ -1,0 +1,11 @@
+node_modules
+config.js
+bundle.js
+style.css
+coverage
+*.tsv
+*.csv
+*.zip
+newFile.json
+newrelic.js
+*.log

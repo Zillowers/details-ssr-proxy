@@ -1,0 +1,141 @@
+@import "_variables";
+
+.launch{
+	position: relative;
+  cursor: pointer;
+	.launch-btn{
+    padding: 13px 19px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+	}
+}
+.popup-cal{
+	background: #fff;
+	position: absolute;
+  right: 0px;
+  top: 28px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition: transform 0.1s ease-in-out 0s, -webkit-transform 0.1s ease-in-out 0s, -ms-transform 0.1s ease-in-out 0s, opacity 0.1s ease-in-out 0s;
+	min-width: 380px;
+	border: 1px solid #aaa;
+	box-shadow: 0 0 2px #444;
+	z-index: 900;
+	.cal-title{
+		text-align: center;
+		padding-top: 20px;
+	}
+	.cal-body{
+    text-align: center;
+    .banner{
+    	padding: 15px 0 25px;
+	    height: 100%;
+	    background-color: #cdf2db;
+	    margin-top: 10px;
+	    .cal-btn a{
+				color: #fff;
+				background: #0074e4;
+				border: none;
+		    transition: none;
+				&:hover{
+					background-color: #1b5098;
+					background: linear-gradient(to top,#0074e4,#1b5098);
+					background-repeat: repeat-x;
+					color: #fff;
+				}
+	    }
+    }
+    .cal-payment{
+    	font-size: 25px;
+    }
+    .sub-text{
+			color: #999;
+			font-size: 12px;
+			margin-top: 5px;
+    }
+	}
+	.cal-form{
+		padding: 20px;
+		.acol{
+			display: inline-block;
+			width: 40%;
+			margin-right: 6%;
+			.form-field{
+				margin-bottom: 15px;
+			}
+			label{
+				font-size: 14px;
+		    display: block;
+		    padding-bottom: 3px;
+			}
+			.cal-each-input{
+				position: relative;
+				input, select {
+					width: 100%;
+					padding: 0 6px;
+					border: 1px solid #aaa;
+					background-color: #fff;
+					box-shadow: inset 0 2px 2px #fafafa, 0 0 0 #62aef7;
+					/* line-height: 30px; */
+					height: 30px;
+					appearance: none;
+						-webkit-appearance: none;
+						-moz-appearance: none;
+						-ms-appearance: none;
+					border-radius: 0;
+					font-size: 1.1em;
+				}
+				input.left-type{
+					padding-left: 22px;
+				}
+				input.right-type{
+					padding-right: 22px;
+				}
+				.text-left{
+					left: 6px;
+				}
+				.text-right{
+			    right: 6px;
+				}
+				.text-left, .text-right{
+					position: absolute;
+    			top: 4px;
+			    color: #999;
+				}
+				.triangle{
+		      position: absolute;
+			    right: 6px;
+			    display: block;
+			    width: 5px;
+			    height: 5px;
+			    border-right: 4px solid transparent;
+			    border-left: 4px solid transparent;
+			    border-top: 6px solid #999;
+			    top: 13px;
+				}
+			}
+		}
+		.bcol{
+			@extend .acol;
+ 			width: 54%;
+ 			margin-right: 0;
+ 			.split{
+ 				div{
+ 					display: inline-block;
+ 				}
+				& > div:nth-of-type(1){
+			    width: 65%;
+				}
+				& > div:nth-of-type(2){
+			    width: 35%;
+				}
+ 			}
+		}
+		.advanced{
+			text-align: center;
+			color: $primary-color;
+		}
+	}
+}

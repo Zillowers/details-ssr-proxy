@@ -1,0 +1,51 @@
+@import "_variables";
+// modules
+
+
+// 1. fact module
+.feature-module{
+  display: inline-block;
+  .module-img{
+    float: left;
+    margin-right: 15px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+  }
+  .module-text{
+    float: left;
+    width: 60%;
+    .body{
+      white-space: nowrap;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .detail-module-title{
+    color: lighten(#000, 60%);
+  }
+}
+
+// 2. detail module
+.details{
+  .feature-module{
+    margin-bottom: 10px;
+  }
+  .label{
+    margin-bottom: 5px;
+  }
+}
+.detail-title{
+  font-size: $detail-title-font-size;
+  line-height: $regular-line-height;
+  font-weight: $thick-font-weight;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.follow-details{
+  padding-top: 15px;
+  margin-top: 15px;
+  border-top: 1px solid lighten(#000, 80%);
+}

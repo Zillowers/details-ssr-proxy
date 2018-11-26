@@ -1,0 +1,40 @@
+@import '_variables';
+
+// main content
+main{
+	.section-shrink{
+    max-height: 750px;
+    overflow: hidden;
+	}
+	.more-less{
+		padding: 10px 0;
+		cursor: pointer;
+		color: $primary-color;
+		text-align: center;
+	}
+}
+
+.main-contents{
+  margin-bottom: 30px;
+  .more-less{
+		cursor: pointer;
+		color: $primary-color;
+		text-align: left;
+  }
+}
+
+.main-col{
+	display: inline-block;
+	position: relative;
+	.body-shrink{
+		max-height: 110px;
+		overflow: hidden;
+	}
+	.section-shrink-hider{
+    height: 50px;
+    position: relative;
+    top: -50px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%);
+    margin-bottom: -50px;
+	}
+}
